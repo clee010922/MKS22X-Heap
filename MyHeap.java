@@ -17,7 +17,7 @@ public class MyHeap {
       if (data[index] < data[max]) {
         swap(data, index, max);
         index = max;
-      } 
+      }
     }
   }
 
@@ -26,7 +26,9 @@ public class MyHeap {
   }
 
   public static void heapify(int[] data) {
-
+    for (int i = data.length-1; i >= 0; i--) {
+      pushDown(data, data.length, i);
+    }
   }
 
   public static void heapsort(int[] data) {
