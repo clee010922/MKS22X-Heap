@@ -4,25 +4,23 @@ public class MyHeap {
     int left = 2*index+1;
     int right = 2*index+2;
     int max;
-    if (right == size)
-      max = left;
-    else {
+    if (right < size) {
       if (data[right] > data[left])
         max = right;
       else max = left;
     }
+    else max = left;
     while(max < size && data[max] > data[index]) {
       swap(data, index, max);
       index = max;
       left = 2*index+1;
       right = 2*index+2;
-      if (right == size)
-        max = left;
-      else {
+      if (right < size) {
         if (data[right] > data[left])
           max = right;
         else max = left;
       }
+      else max = left;
     }
   }
 
@@ -57,6 +55,12 @@ public class MyHeap {
     int temp = data[a];
     data[a] = data[b];
     data[b] = temp;
+  }
+
+  public static void main(String[] args) {
+    int[] data = {9, 4, 7, 5, 8, 1, 2, 3, 6, 0};
+    heapify(data);
+    HeapPrinter.print(data);
   }
 
 }
