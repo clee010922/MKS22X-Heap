@@ -65,6 +65,10 @@ public class MyHeap {
     heapsort(data);
     HeapPrinter.print(data);
     System.out.println(Arrays.toString(data));
+    int[] data2 = {100, 4, 60, 238, 88, 13543, 45, 2322, 0};
+    heapsort(data2);
+    HeapPrinter.print(data2);
+    System.out.println(Arrays.toString(data2));
   }
 
 }
