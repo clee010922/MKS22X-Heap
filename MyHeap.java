@@ -1,3 +1,4 @@
+import java.util.*;
 public class MyHeap {
 
   private static void pushDown(int[] data, int size, int index) {
@@ -61,6 +62,9 @@ public class MyHeap {
     int[] data = {9, 4, 7, 5, 8, 1, 2, 3, 6, 0};
     heapify(data);
     HeapPrinter.print(data);
+    heapsort(data);
+    HeapPrinter.print(data);
+    System.out.println(Arrays.toString(data));
   }
 
 }
