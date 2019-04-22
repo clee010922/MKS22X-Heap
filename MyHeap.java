@@ -4,19 +4,24 @@ public class MyHeap {
     int left = 2*index+1;
     int right = 2*index+2;
     int max;
-    if (right == size) {
-      if (data[index] < data[left]) {
-        swap(data, index, left);
-        index = left;
-      }
-    }
-    else if (right < size) {
+    if (right == size)
+      max = left;
+    else {
       if (data[right] > data[left])
         max = right;
       else max = left;
-      if (data[index] < data[max]) {
-        swap(data, index, max);
-        index = max;
+    }
+    while(max < size && data[max] > data[index]) {
+      swap(data, index, max);
+      index = max;
+      left = 2*index+1;
+      right = 2*index+2;
+      if (right == size)
+        max = left;
+      else {
+        if (data[right] > data[left])
+          max = right;
+        else max = left;
       }
     }
   }
