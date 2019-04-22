@@ -69,6 +69,7 @@ public class MyHeap {
     heapsort(data2);
     HeapPrinter.print(data2);
     System.out.println(Arrays.toString(data2));
+    
   }
 
 }
