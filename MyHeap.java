@@ -74,7 +74,7 @@ public class MyHeap {
   */
 
   public static void main(String[]args){
-   System.out.println("Size\t\tMax Value\tmerge/builtin ratio ");
+   System.out.println("Size\t\tMax Value\theapsort/builtin ratio ");
    int[]MAX_LIST = {1000000000,500,10};
    for(int MAX : MAX_LIST){
      for(int size = 31250; size < 2000001; size*=2){
@@ -110,6 +110,6 @@ public class MyHeap {
    int[] arr = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14};
    HeapPrinter.print(arr);
    System.out.println();
-}
+ }
 
 }
